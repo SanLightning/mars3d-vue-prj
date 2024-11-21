@@ -3,6 +3,7 @@
     路由切换测试：
     <mars-button @click="toWidget">打开widget地图</mars-button>
     <mars-button @click="toMap">打开空白地图</mars-button>
+    <mars-button @click="toAntDesign">打开AntDesign</mars-button>
   </a-space>
 </template>
 
@@ -10,12 +11,14 @@
 import { useRouter } from "vue-router"
 
 const router = useRouter()
-
-const toMap = () => {
+function toMap() {
   router.push("map")
 }
 const toWidget = () => {
   router.push("widget")
+}
+function toAntDesign() {
+  router.push("antDesignVue")
 }
 </script>
 

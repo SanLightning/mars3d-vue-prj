@@ -10,13 +10,14 @@ import { injectState, key } from "@mars/common/store/widget"
 import { store as testStore, key as testKey } from "@mars/common/store/test"
 import store from "./widget-store"
 import MarsUI from "@mars/components/mars-ui"
+import AntDesignVue from "ant-design-vue"
 import { router } from "./routes"
 import "@mars/components/mars-ui/common"
 
 const app = createApp(Application)
 
 app.use(MarsUI)
-
+app.use(AntDesignVue)
 app.use(router)
 
 app.use(injectState(store), key)
